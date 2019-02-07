@@ -4,6 +4,11 @@
     <title>Resto</title>
     <link href="style.css" type="text/css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.js" async></script>
 </head>
 <body>
 
@@ -27,7 +32,12 @@
     <!-- Start homepage content -->
 
     <div id="main-banner">
-        <img src="images/banner.jpg" alt="Welcome to Resto">
+        <picture>
+            <source srcset="images/mobile.jpeg" media="(max-width: 480px)">
+            <source srcset="images/tablet.jpeg" media="(max-width: 768px)">
+            <img srcset="images/banner.jpg" alt="Welcome to Resto">
+        </picture>
+        <!-- <img src="images/banner.jpg" alt="Welcome to Resto"> -->
     </div>
 
     <div class="wrapper">
